@@ -1,3 +1,22 @@
+/*Global Styles*/
 body{
+	padding: 0;
+	margin: 0;
 	background-color: steelblue;
+	font-family: 'optima'
+}
+li{
+	list-style-type: circle;
+	font-size: 18px;
+}
+
+/*General Styles*/
+.center{
+	text-align: center;
+}
+.main{
+}	
+.section{
+	display: inline-block;
+	margin-right: 20px;
 }

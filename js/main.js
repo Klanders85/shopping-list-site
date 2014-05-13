@@ -3,7 +3,7 @@ var produce = ['apples', 'oranges', 'avocado'];
 var proteins = ['steak','chicken','bacon'];
 var hbc = ['toilet paper', 'toofbrush', 'aspirin'];
 
-var item = prompt("What do you need from the store?");
+// var item = prompt("What do you need from the store?");
 console.log(item);
 
 function myFunc (){

@@ -4,8 +4,9 @@
 body{
 	padding: 0;
 	margin: 0;
-	background-color: steelblue;
-	font-family: 'silkscreen';
+	background-color: #34495e;
+	font-family: 'copperplate';
+	color: #f39c12;
 }
 ul{
 	padding: 0;

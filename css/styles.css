@@ -1,22 +1,35 @@
+
+
 /*Global Styles*/
 body{
 	padding: 0;
 	margin: 0;
 	background-color: steelblue;
-	font-family: 'optima'
+	font-family: 'silkscreen';
+}
+ul{
+	padding: 0;
+
 }
 li{
+	display: inline;
 	list-style-type: circle;
 	font-size: 18px;
 }
 
 /*General Styles*/
-.center{
+p{
+	font-size: 1.5em;
+	line-height: 50px;
+}
+h1{
 	text-align: center;
 }
+.container{
+	width: 1000px;
+	margin: 0 auto;
+}
+
 .main{
-}	
-.section{
-	display: inline-block;
-	margin-right: 20px;
+	text-align: center;
 }

@@ -20,31 +20,29 @@
 					</form>
 				</div>
 			</div>
-			<ul class="item-list"></ul>
 		</div>
 	</body>
 	<script type="text/javascript">
-		//HTML form stored as a jQuery var
-		// var form = $('<form><input type="text" id="addNewitem"><button>Add To List</button type="button"> <ul id="groceryList"></ul></form>');
-
-		// $('.category').click(function(){
-		// 	$(this).append(form);
-		// })
-
+		
 		//Give the button an onClick function
-		$('button').click(function(){
+		$('button').click(function(e){
+			//prevent default/ to stop the page from reloading after submit
+			e.preventDefault()
 
-			//store the input field's value in a var
-			var newItem = $('#addNewItem').val();
+			//store the input field's value in a var as a LI
+			var newItem= $('<li>' + $('#addNewItem').val() + '</li>')
 
 			//append the var in an LI to the parent UL
-			$('#groceryList').append('<li>' + newItem + '</li>' + '<br>');
-			//prevent default/return false?
-			
-			console.log("Function works");
-			return false;
-			
-		})
+			$('#groceryList').append(newItem)
+			//alert if entry was empty
+
+			//adding strikethrough class to newItem upon click
+			newItem.click(function(){
+				$(this).addClass('boughtItem')
+				console.log()
+				$('addNewItem').val('')
+			});
+		});		
 		
 		
 	

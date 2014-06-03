@@ -13,7 +13,7 @@ ul{
 
 }
 li{
-	display: inline;
+	display: block;
 	list-style-type: circle;
 	font-size: 18px;
 }
@@ -45,4 +45,7 @@ h1{
 .category:hover{
 	background-color: #e67e22;
 	color: #34495e;
+}
+.boughtItem{
+	text-decoration: line-through;
 }

@@ -11,21 +11,13 @@
 			<h1 class="center">Shopping List</h1><hr>
 			<h2 class="center">What Do You Need?</h2>
 			<div class="category-wrapper">
-				<div class="category">
-					<h3>Produce</h3>
-
-				</div>
-
-				<div class="category">
-					<h3>Protein</h3>
-				</div>
-
-				<div class="category">
-					<h3>Cleaners</h3>
-				</div>
-
-				<div class="category">
-					<h3>Misc.</h3>
+				<div class="category"><br>
+					<form>
+						<input type="text" id="addNewItem"><br>
+						  <button>Add Item</button>
+						  <br>
+						 <ul id="groceryList"></ul>
+					</form>
 				</div>
 			</div>
 			<ul class="item-list"></ul>
@@ -33,12 +25,33 @@
 	</body>
 	<script type="text/javascript">
 		//HTML form stored as a jQuery var
-		var form = $('<form><input type="text" id="grocery-item"></input><br><input type="submit" id="addToList"></input></form>');
+		// var form = $('<form><input type="text" id="addNewitem"><button>Add To List</button type="button"> <ul id="groceryList"></ul></form>');
 
-		//click on grocery category, appropriate entry form is added via .append()
-		$('.category').click(function(){
-			$(this).append(form);
+		// $('.category').click(function(){
+		// 	$(this).append(form);
+		// })
+
+		//Give the button an onClick function
+		$('button').click(function(){
+
+			//store the input field's value in a var
+			var newItem = $('#addNewItem').val();
+
+			//append the var in an LI to the parent UL
+			$('#groceryList').append('<li>' + newItem + '</li>' + '<br>');
+			//prevent default/return false?
+			
+			console.log("Function works");
+			return false;
+			
 		})
+		
+		
+	
+	
+		
+		
+
 	</script>
 </html>
 

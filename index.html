@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title></title>
+	<meta name="viewport" content="initial-scale=1">
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -25,6 +26,7 @@
 	<script type="text/javascript">
 		
 		//Give the button an onClick function
+
 		$('button').click(function(e){
 			//prevent default/ to stop the page from reloading after submit
 			e.preventDefault()
@@ -43,6 +45,19 @@
 				$('addNewItem').val('')
 			});
 		});		
+
+		$('button').click(function(){
+			//store the input field's value in a var
+			var newItem = $('#addNewItem').val();
+			//append the var in an LI to the parent UL
+			$('#groceryList').append('<li>' + newItem + '</li>' + '<br>');
+			//prevent default/return false?
+			console.log("Function works");
+			$('#addNewitem').val('');
+			return false;
+			
+		})
+
 		
 		
 	

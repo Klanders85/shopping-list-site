@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-	<title></title>
+	<title>Create Your Shopping List!</title>
 	<meta name="viewport" content="initial-scale=1">
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
@@ -24,7 +24,7 @@
 		</div>
 	</body>
 	<script type="text/javascript">
-		
+
 		//Give the button an onClick function
 
 		$('button').click(function(e){
@@ -41,30 +41,24 @@
 			//adding strikethrough class to newItem upon click
 			newItem.click(function(){
 				$(this).addClass('boughtItem')
-				console.log()
-				$('addNewItem').val('')
 			});
+			localStorage.setItem('todos', groceryList.innerHTML);
+			
 		});		
 
-		$('button').click(function(){
-			//store the input field's value in a var
-			var newItem = $('#addNewItem').val();
-			//append the var in an LI to the parent UL
-			$('#groceryList').append('<li>' + newItem + '</li>' + '<br>');
-			//prevent default/return false?
-			console.log("Function works");
-			$('#addNewitem').val('');
-			return false;
-			
-		})
-
-		
-		
-	
-	
-		
+		//if to check if we have something in localstorage
+		if(localStorage.getItem('todos')){
+			$('#groceryList').html(localStorage.getItem('todos'));
+			$('#groceryList').children('li').each(function(){
+				$(this).click(function(){
+					$(this).addClass('boughtItem');
+				})
+			})
+		}
 		
 
+		
+		
 	</script>
 </html>
 

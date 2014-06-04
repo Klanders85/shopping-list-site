@@ -1,0 +1,8 @@
+{
+	produce: {
+		fruit: [
+			"apples",
+			"oranges"
+		]
+	}
+}
